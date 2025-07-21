@@ -1,0 +1,31 @@
+{
+  "name": "demo-precommit-hooks",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix ",
+    "format": "prettier --write ."
+  },
+  "pre-commit": [
+    "lint",
+    "format"
+  ],
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.21.2",
+    "http-errors": "~1.6.3",
+    "jade": "^1.9.2",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "eslint": "^9.31.0",
+    "globals": "^16.3.0",
+    "jshint": "^2.13.6",
+    "pre-commit": "^1.0.10"
+  },
+  "type": "module"
+}
